@@ -1,4 +1,4 @@
-# ATDD Accelerator Template - Multi Component
+# ATDD Accelerator Template - Multi Language
 
 [![commit-stage-monolith](https://github.com/optivem/atdd-accelerator-template-multi-comp/actions/workflows/commit-stage-monolith.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-multi-comp/actions/workflows/commit-stage-monolith.yml)
 [![acceptance-stage](https://github.com/optivem/atdd-accelerator-template-multi-comp/actions/workflows/acceptance-stage.yml/badge.svg)](https://github.com/optivem/atdd-accelerator-template-multi-comp/actions/workflows/acceptance-stage.yml)

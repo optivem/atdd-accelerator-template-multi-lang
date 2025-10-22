@@ -1,19 +1,9 @@
-# Use the official .NET SDK image for build
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM eclipse-temurin:21-jdk-alpine
+
 WORKDIR /app
 
-# Copy csproj and restore as distinct layers
-COPY *.csproj ./
-RUN dotnet restore
+COPY build/libs/*.jar app.jar
 
-# Copy everything else and build
-COPY . ./
-RUN dotnet publish Optivem.AtddAccelerator.Template.Monolith.csproj -c Release -o out
+EXPOSE 8080
 
-# Use the official ASP.NET runtime image for the app
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
-WORKDIR /app
-COPY --from=build /app/out ./
-
-# Set the entry point
-ENTRYPOINT ["dotnet", "Optivem.AtddAccelerator.Template.Monolith.dll"]
+ENTRYPOINT ["java", "-jar", "app.jar"]

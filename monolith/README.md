@@ -1,4 +1,6 @@
-# System - Monolith (C#)
+# Monolith (Java)
+
+This is a sample monolithic application written in Java.
 
 ## Instructions
 
@@ -14,22 +16,34 @@ Check that you have Powershell 7
 $PSVersionTable.PSVersion
 ```
 
-Ensure you have .NET 8:
+Set the JAVA_HOME environment variable to point to your JDK 21 installation. Check that it's set correctly
 
 ```shell
-dotnet --version
+echo $env:JAVA_HOME
 ```
 
-To build the project:
+Ensure you have JDK 21 installed
 
 ```shell
-dotnet build
+java -version
 ```
 
-To run:
+Build the application using Gradle
 
 ```shell
-dotnet run --urls "http://localhost:8080"
+.\gradlew build
+```
+
+Run the application
+
+```shell
+.\gradlew bootRun
+```
+
+Rebuild and restart the application
+
+```shell
+.\gradlew build && .\gradlew bootRun
 ```
 
 App should now be running on:

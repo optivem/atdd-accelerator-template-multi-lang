@@ -1,48 +1,37 @@
-# Build results
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 bin/
-obj/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-# User-specific files
-*.user
-*.suo
-*.userosscache
-*.sln.docstates
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
-# Visual Studio Code
+### VS Code ###
 .vscode/
-
-# Visual Studio
-.vs/
-
-# NuGet packages
-*.nupkg
-*.snupkg
-packages/
-# Uncomment if you have a packages directory
-# !packages/build/
-
-# Resharper
-_ReSharper*/
-*.[Rr]e[Ss]harper
-
-# DotCover
-*.dotCover
-
-# Rider
-.idea/
-
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
-
-# Others
-*.log
-*.tlog
-*.cache
-*.pdb
-
-# Azure Pipelines
-.vsts/
-
-# Local test results
-TestResults/

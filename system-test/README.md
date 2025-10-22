@@ -1,4 +1,4 @@
-# System Test (.NET)
+# System Test (TypeScript)
 
 ## Instructions
 
@@ -14,6 +14,24 @@ Check that you have Powershell 7
 $PSVersionTable.PSVersion
 ```
 
+Check that you have Node.js 22 installed
+
+```shell
+node -v
+```
+
+Install dependencies
+
+```shell
+npm install
+```
+
+Install Playwright
+
+```shell
+npx playwright install
+```
+
 Start Docker Containers
 
 ```shell
@@ -23,13 +41,13 @@ docker compose up -d
 Run All Tests
 
 ```shell
-dotnet test
+npm test
 ```
 
 Run Smoke Tests Only
 
 ```shell
-dotnet test --filter "FullyQualifiedName~Optivem.AtddAccelerator.Template.SystemTest.SmokeTests"
+npm test -- test/smoke-tests
 ```
 
 Stop Docker Containers
